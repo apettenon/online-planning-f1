@@ -183,7 +183,7 @@ class GridWorld(gym.Env):
             self.PrettyTable = pt
 
         t = self.PrettyTable()
-        pi_table = np.zeros((self.H, self.W), dtype=np.int)
+        pi_table = np.zeros((self.H, self.W), dtype=int)
         v_table = np.zeros((self.H, self.W))
         for state in range(self.W * self.H):
             x, y = self._intToCouple(state)

@@ -33,14 +33,15 @@ if __name__ == '__main__':
     out_dir = 'logs/' + args.game + '/' + time_str + '/'
 
     def pre_process():
-        from gym.envs.registration import register
-        try:
-            register(
-                id='Blackjack_pi-v0',
-                entry_point='envs.blackjack_pi:BlackjackEnv',
-            )
-        except:
-            print("Something wrong registering Blackjack environment")
+        pass
+        # from gym.envs.registration import register
+        # try:
+        #     register(
+        #         id='Blackjack_pi-v0',
+        #         entry_point='envs.blackjack_pi:BlackjackEnv',
+        #     )
+        # except:
+        #     print("Something wrong registering Blackjack environment")
 
     # Disable GPU acceleration if not specifically requested
     if not args.gpu:
@@ -198,3 +199,4 @@ if __name__ == '__main__':
             # exps.append(offline_scores)
             # scores = np.stack(exps, axis=0)
             # np.save(out_dir + "scores.npy", scores)
+

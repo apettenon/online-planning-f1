@@ -165,7 +165,7 @@ def agent(game, n_ep, n_mcts, max_ep_len, lr, c, gamma, data_size, batch_size, t
 
 
     t_total = 0  # total steps
-    R_best = -np.Inf
+    R_best = -np.inf
     a_best = None
     seed_best = None
 

@@ -44,7 +44,7 @@ def agent(game, n_ep, n_mcts, max_ep_len, lr, c, gamma, data_size, batch_size, t
     D = Database(max_size=data_size, batch_size=batch_size)
     model = Model(Env=Env, lr=lr, n_hidden_layers=n_hidden_layers, n_hidden_units=n_hidden_units)
     t_total = 0  # total steps
-    R_best = -np.Inf
+    R_best = -np.inf
 
     with tf.Session() as sess:
         model.sess = sess

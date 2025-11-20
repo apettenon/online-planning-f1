@@ -33,14 +33,15 @@ if __name__ == '__main__':
 
 
     def pre_process():
-        from gym.envs.registration import register
-        try:
-            register(
-                id='Blackjack_pi-v0',
-                entry_point='envs.blackjack_pi:BlackjackEnv',
-            )
-        except:
-            print("Something wrong registering Blackjack environment")
+        pass
+        # from gym.envs.registration import register
+        # try:
+        #     register(
+        #         id='Blackjack_pi-v0',
+        #         entry_point='envs.blackjack_pi:BlackjackEnv',
+        #     )
+        # except:
+        #     print("Something wrong registering Blackjack environment")
 
     # Disable GPU acceleration if not specifically requested
     if not args.gpu:

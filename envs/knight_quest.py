@@ -364,7 +364,7 @@ class KnightQuest(DiscreteEnv):
     # def compute_matrix_form(self):
     #     nS = self.nb_states
     #     nA = self.max_nb_actions_per_state
-    #     P_mat = np.zeros((nS,nA,nS), dtype=np.float)
+    #     P_mat = np.zeros((nS,nA,nS), dtype=float)
     #     for s in range(nS):
     #         for a in range(nA):
     #             for next_state, p in zip(self.P[s][a][0], self.P[s][a][1]):

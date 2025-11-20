@@ -206,7 +206,7 @@ class MCTSAgent(MCTSStochastic):
         # D = Database(max_size=data_size, batch_size=batch_size)
         # model = Model(Env=Env, lr=lr, n_hidden_layers=n_hidden_layers, n_hidden_units=n_hidden_units)
         t_total = 0  # total steps
-        R_best = -np.Inf
+        R_best = -np.inf
         for ep in range(n_ep):
             if eval_freq > 0 and ep % eval_freq == 0 and ep > 0:  # and ep > 0
                 print('Evaluating policy for {} episodes!'.format(eval_episodes))

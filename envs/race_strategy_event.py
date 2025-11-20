@@ -160,8 +160,8 @@ class RaceEnv(gym.Env):
         self._compound_initials = []
         self._available_compounds = []
 
-        self._flags_encoder = OneHotEncoder(sparse=False)
-        self._compound_encoder = OneHotEncoder(sparse=False)
+        self._flags_encoder = OneHotEncoder(sparse_output=False)
+        self._compound_encoder = OneHotEncoder(sparse_output=False)
         self._flags_encoder.fit(np.array(FLAGS).reshape(-1, 1))
         self._compound_encoder.fit(np.array(COMPOUNDS).reshape(-1, 1))
         self.seed()
