@@ -1,0 +1,12 @@
+{
+  "agents": [
+    {
+      "agent_class": "race_ol_uct",
+      "parameters": {
+        "variance":  false,
+        "depth_based_bias": false
+      },
+      "c_dpw": 1.2
+    }
+  ]
+}

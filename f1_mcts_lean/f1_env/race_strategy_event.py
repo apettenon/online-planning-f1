@@ -74,7 +74,7 @@ def select_races(year: int, ini_path="./race_simulation/racesim/input/parameters
 class RaceEnv(gym.Env):
 
     def __init__(self, gamma=0.95, horizon=20, scale_reward=True, positive_reward=True, start_lap=8,
-                 verbose=False, config_path='./envs/race_strategy_model/active_drivers.csv', skip_steps=False,
+                 verbose=False, config_path='f1_env/race_strategy_model/active_drivers.csv', skip_steps=False,
                  n_cores=-1, race_pars_file=None):
         # print("////////////////////////////////////////", horizon)
         self.verbose = verbose
