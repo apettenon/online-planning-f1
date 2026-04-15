@@ -241,7 +241,7 @@ class RaceEnv(gym.Env):
                'action_queue': deepcopy(self._actions_queue),
                'agents_queue': deepcopy(self._agents_queue),
                'last_pits': deepcopy(self._agents_last_pit),
-               'simulator_state': self._race_sim.get_simulation_state(),
+               'simulator_state': deepcopy(self._race_sim.get_simulation_state()),
                't': deepcopy(self._t),
                'terminal': deepcopy(self._terminal),
                'available_compounds': deepcopy(self._available_compounds),
@@ -388,7 +388,7 @@ class RaceEnv(gym.Env):
 
         if self._terminal:  # Penalize if no pit stop has been done or if no two different compounds have been used
             for i in range(self.agents_number):
-                reward[i] = -10000 if self._pit_counts == 0 or len(self.used_compounds) == 1 else reward[i]
+                reward[i] = -10000 if self._pit_counts[i] == 0 or len(self.used_compounds[i]) <= 1 else reward[i]
 
         if self.scale_reward:
             reward /= self.max_lap_time
