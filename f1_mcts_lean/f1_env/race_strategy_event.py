@@ -216,7 +216,7 @@ class RaceEnv(gym.Env):
                 lap_time = current_lap_times[sim_index]
                 cumulative = cumulative_times[sim_index]
                 pit_count = self._pit_counts[env_index] / 5
-                changed_compound = len(self.used_compounds) > 1
+                changed_compound = len(self.used_compounds[env_index]) > 1
                 break
 
 
